@@ -28,7 +28,7 @@ Criar uma aplicação web utilizando **JavaScript puro (Vanilla JS)** para consu
 ---
 
 ## 🔗 Acesse o Projeto
-
+- aluno: João Lucas Freire da Silva
 - 💻 GitHub: [COLE AQUI O LINK]
 - 🌐 GitHub Pages: [COLE AQUI O LINK]
 
