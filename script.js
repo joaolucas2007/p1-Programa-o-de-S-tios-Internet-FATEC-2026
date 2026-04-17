@@ -1,45 +1,62 @@
 'use strict'
 
 async function buscarHerois() {
-  const nome = document.getElementById("searchInput").value.toLowerCase();  //tolowerCase serve para deixar tudo em minúsculo evitando não achar o personagem bsucado
+  const nome = document.getElementById("input-pesquisa").value.toLowerCase(); //pega o input, pega o valor que foi digitado e deixa tudo em minusculo
   const container = document.getElementById("container");
 
-  container.innerHTML = "Carregando..."; 
+  container.replaceChildren(Object.assign(document.createElement("p"), { textContent: "Carregando..." })); //esse object.assign serve para deixar essa função mais rapido, para encontrar a  buscar na api, enquanto não encontra fica essa mensagem 'carreegando...'
 
   try {
-    const response = await fetch("https://akabab.github.io/superhero-api/api/all.json");//api do github de personagens é de um projeto open souce do git hub
-    const data = await response.json();
+    const response = await fetch("https://akabab.github.io/superhero-api/api/all.json");
+    const data = await response.json();   //pega o conteúdo da API e transforma e json
 
     const filtrados = data.filter(hero =>
-      hero.name.toLowerCase().includes(nome)   //serve para filtrar os heróis vai buscar em toda a api mas só vai trazer os que correspondem com o nome digitado
+      hero.name.toLowerCase().includes(nome)          //filtrar os hérois e ve se está com o nome da busca 
     );
 
-    container.innerHTML = "";
-
     if (filtrados.length === 0) {
-      container.innerHTML = "<p>Nenhum personagem encontrado</p>";  //esse se serve para caso não encontre nada o personagem buscado não esteja na api e não encontrou ai mostra essa mensagem
-      return;
+      return container.replaceChildren(Object.assign(document.createElement("p"), {
+        textContent: "Nenhum personagem encontrado"                                             // esse if serve para caso o personagem procurado não esteja na api ele manda essa mensagem 
+      }));                                   
     }
 
-    filtrados.forEach(hero => {
-      const card = document.createElement("div"); //para cada herói encontrada cria uma div e aplica o css
-      card.classList.add("card");
+    const cards = filtrados.map(hero => {
+      const card = document.createElement("div");
+      card.classList.add("card");                                                 //você cria o card e adiciona a class do css
 
-      card.innerHTML = `
-        <img src="${hero.images.md}" alt="${hero.name}">  
-        <h3>${hero.name}</h3>                                                                  
-        <p><strong>Nome real:</strong> ${hero.biography.fullName || "Desconhecido"}</p>  
+      const img = Object.assign(document.createElement("img"), {
+        src: hero.images.md,
+        alt: hero.name
+      });
 
-        <p><strong>Força:</strong> ${hero.powerstats.strength}</p>
-        <p><strong>Inteligência:</strong> ${hero.powerstats.intelligence}</p>
-        <p><strong>Velocidade:</strong> ${hero.powerstats.speed}</p>
-      `;                                                                      //dados que estão na API 
+      const nomeHeroi = Object.assign(document.createElement("h3"), {
+        textContent: hero.name
+      });
+                                                                                      //ta pegando os conteúdos da api, como a imagem de os detalhes dos personagens, nome, força, inteligencia e velocidade
+      const real = document.createElement("p");
+      real.innerHTML = `<strong>Nome real:</strong> ${hero.biography.fullName || "Desconhecido"}`;
 
-      container.appendChild(card);
+      const forca = Object.assign(document.createElement("p"), {
+        textContent: `Força: ${hero.powerstats.strength}`
+      });
+
+      const inteligencia = Object.assign(document.createElement("p"), {
+        textContent: `Inteligência: ${hero.powerstats.intelligence}`
+      });
+
+      const velocidade = Object.assign(document.createElement("p"), {
+        textContent: `Velocidade: ${hero.powerstats.speed}`
+      });
+
+      card.append(img, nomeHeroi, real, forca, inteligencia, velocidade);
+      return card;                                                                //coloca os dados procurados dentro do card
     });
 
-  } catch (erro) {
-    container.innerHTML = "<p>Erro ao carregar dados</p>";
-    console.error("Erro:", erro);
+    container.replaceChildren(...cards);    //esses ... serve para separar em card 1 card 2 card 3 etc etc                                   //adiciona o conteudo do card na api
+
+  } catch {
+    container.replaceChildren(Object.assign(document.createElement("p"), {
+      textContent: "Erro ao carregar dados"
+    }));                                                                                                //serve para tratar erros, caso a api não carregue ou a net caia
   }
 }
