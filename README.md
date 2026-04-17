@@ -29,8 +29,8 @@ Criar uma aplicação web utilizando **JavaScript puro (Vanilla JS)** para consu
 
 ## 🔗 Acesse o Projeto
 - aluno: João Lucas Freire da Silva
-- 💻 GitHub: [COLE AQUI O LINK]
-- 🌐 GitHub Pages: [COLE AQUI O LINK]
+- 💻 GitHub: [https://github.com/joaolucas2007/p1-Programa-o-de-S-tios-Internet-FATEC-2026]
+- 🌐 GitHub Pages: [https://joaolucas2007.github.io/p1-Programa-o-de-S-tios-Internet-FATEC-2026/]
 
 ---
 
