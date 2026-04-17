@@ -122,3 +122,48 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+
+@media (max-width: 768px) {
+  input {
+    width: 80%;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+
+/* celulares */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  button {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .search-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    gap: 15px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .card img {
+    height: 180px;
+  }
+}

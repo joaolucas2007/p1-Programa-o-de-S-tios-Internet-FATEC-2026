@@ -28,9 +28,10 @@ Criar uma aplicação web utilizando **JavaScript puro (Vanilla JS)** para consu
 ---
 
 ## 🔗 Acesse o Projeto
-- aluno: João Lucas Freire da Silva
 - 💻 GitHub: [https://github.com/joaolucas2007/p1-Programa-o-de-S-tios-Internet-FATEC-2026]
 - 🌐 GitHub Pages: [https://joaolucas2007.github.io/p1-Programa-o-de-S-tios-Internet-FATEC-2026/]
+- link da API : [href="https://github.com/akabab/superhero-api]
+- Link Linkedin : [https://www.linkedin.com/posts/jo%C3%A3o-lucas-freire-da-silva-67bab0388_fiz-um-site-html-css-e-js-usando-uma-api-activity-7451043463015407616-DRd1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF-O9r8BygsC8BLzSdE9w3rGbg9JIkCc2S0]
 
 ---
 
@@ -46,7 +47,7 @@ A aplicação permite buscar personagens em uma API pública e exibir suas infor
 
 ## 📸 Preview
 
-![](./preview.png)
+![](./imagens/imagem-api.png)
 
 ---
 
@@ -54,7 +55,7 @@ A aplicação permite buscar personagens em uma API pública e exibir suas infor
 
 Confira a publicação sobre este projeto:
 
-👉 [COLE AQUI O LINK DO POST]
+👉 [https://www.linkedin.com/posts/jo%C3%A3o-lucas-freire-da-silva-67bab0388_fiz-um-site-html-css-e-js-usando-uma-api-activity-7451043463015407616-DRd1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF-O9r8BygsC8BLzSdE9w3rGbg9JIkCc2S0]
 
 ---
 
@@ -64,3 +65,23 @@ Confira a publicação sobre este projeto:
 Prof. Fernando Leonid – 2026
 
 ---
+
+## Entrega
+- Nome do aluno: João Lucas Freire da Silva 3 ° Semestre
+- Link do git hub: [https://github.com/joaolucas2007/p1-Programa-o-de-S-tios-Internet-FATEC-2026]
+- Link do git pages : [https://joaolucas2007.github.io/p1-Programa-o-de-S-tios-Internet-FATEC-2026/]
+- Link do linkedin : [https://www.linkedin.com/posts/jo%C3%A3o-lucas-freire-da-silva-67bab0388_fiz-um-site-html-css-e-js-usando-uma-api-activity-7451043463015407616-DRd1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF-O9r8BygsC8BLzSdE9w3rGbg9JIkCc2S0]
+
+
+
+## Critérios
+* [x] Foi criado o campo de busca? (0,5)
+* [x] Os cards são criados dinamicamente? (1,5)
+* [x] Os cards são criados dependendo da busca? (1,5)
+* [x] Foi utilizado métodos para criar os novos elementos HTML? (1,5)
+* [x] O consumo de API foi feito usando o `fetch()`? (1,5)
+* [x] Incluiu tratamento de erro no campo de busca? (0,5)
+* [x] Está responsivo? (1,0)
+* [x] Foi criado o README com informações do projeto? (1,0)
+* [x] Foi habilitado o github Pages? (0,5)
+* [x] Foi publicado no linkedIn? (0,5)
